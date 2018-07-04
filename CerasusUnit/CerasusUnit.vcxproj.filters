@@ -14,4 +14,37 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DirectCommon.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectGraphics3D.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectThreadSafe.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CerasusUnit.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DirectGraphics3D.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectThreadSafe.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CerasusUnit.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="CerasusUnit.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
 </Project>
