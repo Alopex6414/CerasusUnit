@@ -6,8 +6,9 @@
 * @file		CreasusUnit.h
 * @brief	This File is CreasusUnit DLL Project.
 * @author	Alopex/Helium
-* @version	v1.00a
+* @version	v1.01a
 * @date		2018-07-04	v1.00a	alopex	Create Project.
+* @date		2018-07-05	v1.01a	alopex	Add Get&Set Function.
 */
 #pragma once
 
@@ -74,8 +75,28 @@ public:
 	//访问
 	virtual DirectGraphics3D* CERASUSUNIT_CALLMODE CCerasusUnitGetDirectGraphics3D() const;					//CCerasusUnit Get DirectGraphics3D(~CCerasusUnit 获取DirectGraphics3D接口指针)
 
+	virtual UINT CERASUSUNIT_CALLMODE CCerasusUnitGetScreenWidth() const;									//CCerasusUnit Get Screen Width(~CCerasusUnit 获取屏幕宽度)
+	virtual UINT CERASUSUNIT_CALLMODE CCerasusUnitGetScreenHeight() const;									//CCerasusUnit Get Screen Height(~CCerasusUnit 获取屏幕高度)
+	virtual LPWSTR CERASUSUNIT_CALLMODE CCerasusUnitGetTextureStr() const;									//CCerasusUnit Get Texture Path(~CCerasusUnit 获取纹理路径)
+	virtual UINT CERASUSUNIT_CALLMODE CCerasusUnitGetTextureWidth() const;									//CCerasusUnit Get Texture Width(~CCerasusUnit 获取纹理宽度)
+	virtual UINT CERASUSUNIT_CALLMODE CCerasusUnitGetTextureHeight() const;									//CCerasusUnit Get Texture Height(~CCerasusUnit 获取纹理高度)
+	virtual RECT CERASUSUNIT_CALLMODE CCerasusUnitGetUnitRect() const;										//CCerasusUnit Get Unit Rect(~CCerasusUnit 图元形状)
+	virtual RECT CERASUSUNIT_CALLMODE CCerasusUnitGetUnitTextureRect() const;								//CCerasusUnit Get Unit Texture Rect(~CCerasusUnit 图元纹理形状)
+	virtual float CERASUSUNIT_CALLMODE CCerasusUnitGetUnitAlpha() const;									//CCerasusUnit Get Unit Alpha(~CCerasusUnit 图元Alpha)
+	virtual DG3D_CoordsTransformPara CERASUSUNIT_CALLMODE CCerasusUnitGetTransform() const;					//CCerasusUnit Get Transform(~CCerasusUnit 坐标变换矩阵)
+
 	//控制
 	virtual void CERASUSUNIT_CALLMODE CCerasusUnitSetDirectGraphics3D(DirectGraphics3D* pDirectGraphics3D);	//CCerasusUnit Set DirectGraphics3D(~CCerasusUnit 设置DirectGraphics3D接口指针)
+
+	virtual VOID CERASUSUNIT_CALLMODE CCerasusUnitSetScreenWidth(UINT);										//CCerasusUnit Set Screen Width(~CCerasusUnit 获取屏幕宽度)
+	virtual VOID CERASUSUNIT_CALLMODE CCerasusUnitSetScreenHeight(UINT);									//CCerasusUnit Set Screen Height(~CCerasusUnit 获取屏幕高度)
+	virtual VOID CERASUSUNIT_CALLMODE CCerasusUnitSetTextureStr(LPWSTR);									//CCerasusUnit Set Texture Path(~CCerasusUnit 获取纹理路径)
+	virtual VOID CERASUSUNIT_CALLMODE CCerasusUnitSetTextureWidth(UINT);									//CCerasusUnit Set Texture Width(~CCerasusUnit 获取纹理宽度)
+	virtual VOID CERASUSUNIT_CALLMODE CCerasusUnitSetTextureHeight(UINT);									//CCerasusUnit Set Texture Height(~CCerasusUnit 获取纹理高度)
+	virtual VOID CERASUSUNIT_CALLMODE CCerasusUnitSetUnitRect(RECT);										//CCerasusUnit Set Unit Rect(~CCerasusUnit 图元形状)
+	virtual VOID CERASUSUNIT_CALLMODE CCerasusUnitSetUnitTextureRect(RECT);									//CCerasusUnit Set Unit Texture Rect(~CCerasusUnit 图元纹理形状)
+	virtual VOID CERASUSUNIT_CALLMODE CCerasusUnitSetUnitAlpha(float);										//CCerasusUnit Set Unit Alpha(~CCerasusUnit 图元Alpha)
+	virtual VOID CERASUSUNIT_CALLMODE CCerasusUnitSetTransform(DG3D_CoordsTransformPara);					//CCerasusUnit Set Transform(~CCerasusUnit 坐标变换矩阵)
 
 	//重置
 	virtual HRESULT CERASUSUNIT_CALLMODE CCerasusUnitReset();												//CCerasusUnit Reset(~CCerasusUnit 重置)
