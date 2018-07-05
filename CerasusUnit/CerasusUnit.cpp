@@ -6,9 +6,10 @@
 * @file		CreasusUnit.cpp
 * @brief	This File is CreasusUnit DLL Project.
 * @author	Alopex/Helium
-* @version	v1.01a
+* @version	v1.02a
 * @date		2018-07-04	v1.00a	alopex	Create Project.
 * @date		2018-07-05	v1.01a	alopex	Add Get&Set Function.
+* @date		2018-07-05	v1.02a	alopex	Add Translate Function.
 */
 #include "CerasusUnit.h"
 
@@ -333,6 +334,136 @@ VOID CERASUSUNIT_CALLMODE CCerasusUnit::CCerasusUnitSetTransform(DG3D_CoordsTran
 {
 	DirectThreadSafe ThreadSafe(&m_cs, m_bThreadSafe);
 	memcpy_s(&m_sCoordsTransformPara, sizeof(m_sCoordsTransformPara), &sCoordsTransformPara, sizeof(sCoordsTransformPara));
+}
+
+//------------------------------------------------------------------
+// @Function:	 CCerasusUnitGetScaleX()
+// @Purpose: CCerasusUnit比例变换X
+// @Since: v1.00a
+// @Para: None
+// @Return: None
+//------------------------------------------------------------------
+float &CERASUSUNIT_CALLMODE CCerasusUnit::CCerasusUnitGetScaleX()
+{
+	DirectThreadSafe ThreadSafe(&m_cs, m_bThreadSafe);
+	return m_sCoordsTransformPara.sWorldTransformPara.sScalePara.fScaleX;
+}
+
+//------------------------------------------------------------------
+// @Function:	 CCerasusUnitGetScaleY()
+// @Purpose: CCerasusUnit比例变换Y
+// @Since: v1.00a
+// @Para: None
+// @Return: None
+//------------------------------------------------------------------
+float &CERASUSUNIT_CALLMODE CCerasusUnit::CCerasusUnitGetScaleY()
+{
+	DirectThreadSafe ThreadSafe(&m_cs, m_bThreadSafe);
+	return m_sCoordsTransformPara.sWorldTransformPara.sScalePara.fScaleY;
+}
+
+//------------------------------------------------------------------
+// @Function:	 CCerasusUnitGetScaleZ()
+// @Purpose: CCerasusUnit比例变换Z
+// @Since: v1.00a
+// @Para: None
+// @Return: None
+//------------------------------------------------------------------
+float &CERASUSUNIT_CALLMODE CCerasusUnit::CCerasusUnitGetScaleZ()
+{
+	DirectThreadSafe ThreadSafe(&m_cs, m_bThreadSafe);
+	return m_sCoordsTransformPara.sWorldTransformPara.sScalePara.fScaleZ;
+}
+
+//------------------------------------------------------------------
+// @Function:	 CCerasusUnitGetRotateX()
+// @Purpose: CCerasusUnit旋转变换X
+// @Since: v1.00a
+// @Para: None
+// @Return: None
+//------------------------------------------------------------------
+float &CERASUSUNIT_CALLMODE CCerasusUnit::CCerasusUnitGetRotateX()
+{
+	DirectThreadSafe ThreadSafe(&m_cs, m_bThreadSafe);
+	return m_sCoordsTransformPara.sWorldTransformPara.sRotatePara.fRotateX;
+}
+
+//------------------------------------------------------------------
+// @Function:	 CCerasusUnitGetRotateY()
+// @Purpose: CCerasusUnit旋转变换Y
+// @Since: v1.00a
+// @Para: None
+// @Return: None
+//------------------------------------------------------------------
+float &CERASUSUNIT_CALLMODE CCerasusUnit::CCerasusUnitGetRotateY()
+{
+	DirectThreadSafe ThreadSafe(&m_cs, m_bThreadSafe);
+	return m_sCoordsTransformPara.sWorldTransformPara.sRotatePara.fRotateY;
+}
+
+//------------------------------------------------------------------
+// @Function:	 CCerasusUnitGetRotateZ()
+// @Purpose: CCerasusUnit旋转变换Z
+// @Since: v1.00a
+// @Para: None
+// @Return: None
+//------------------------------------------------------------------
+float &CERASUSUNIT_CALLMODE CCerasusUnit::CCerasusUnitGetRotateZ()
+{
+	DirectThreadSafe ThreadSafe(&m_cs, m_bThreadSafe);
+	return m_sCoordsTransformPara.sWorldTransformPara.sRotatePara.fRotateZ;
+}
+
+//------------------------------------------------------------------
+// @Function:	 CCerasusUnitGetTranslateX()
+// @Purpose: CCerasusUnit位移变换X
+// @Since: v1.00a
+// @Para: None
+// @Return: None
+//------------------------------------------------------------------
+float &CERASUSUNIT_CALLMODE CCerasusUnit::CCerasusUnitGetTranslateX()
+{
+	DirectThreadSafe ThreadSafe(&m_cs, m_bThreadSafe);
+	return m_sCoordsTransformPara.sWorldTransformPara.sTranslatePara.fTranslateX;
+}
+
+//------------------------------------------------------------------
+// @Function:	 CCerasusUnitGetTranslateY()
+// @Purpose: CCerasusUnit位移变换Y
+// @Since: v1.00a
+// @Para: None
+// @Return: None
+//------------------------------------------------------------------
+float &CERASUSUNIT_CALLMODE CCerasusUnit::CCerasusUnitGetTranslateY()
+{
+	DirectThreadSafe ThreadSafe(&m_cs, m_bThreadSafe);
+	return m_sCoordsTransformPara.sWorldTransformPara.sTranslatePara.fTranslateY;
+}
+
+//------------------------------------------------------------------
+// @Function:	 CCerasusUnitGetTranslateZ()
+// @Purpose: CCerasusUnit位移变换Z
+// @Since: v1.00a
+// @Para: None
+// @Return: None
+//------------------------------------------------------------------
+float &CERASUSUNIT_CALLMODE CCerasusUnit::CCerasusUnitGetTranslateZ()
+{
+	DirectThreadSafe ThreadSafe(&m_cs, m_bThreadSafe);
+	return m_sCoordsTransformPara.sWorldTransformPara.sTranslatePara.fTranslateZ;
+}
+
+//------------------------------------------------------------------
+// @Function:	 CCerasusUnitGetAlpha()
+// @Purpose: CCerasusUnit Alpha
+// @Since: v1.00a
+// @Para: None
+// @Return: None
+//------------------------------------------------------------------
+float &CERASUSUNIT_CALLMODE CCerasusUnit::CCerasusUnitGetAlpha()
+{
+	DirectThreadSafe ThreadSafe(&m_cs, m_bThreadSafe);
+	return m_fUnitAlpha;
 }
 
 //------------------------------------------------------------------

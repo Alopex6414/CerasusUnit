@@ -6,9 +6,10 @@
 * @file		CreasusUnit.h
 * @brief	This File is CreasusUnit DLL Project.
 * @author	Alopex/Helium
-* @version	v1.01a
+* @version	v1.02a
 * @date		2018-07-04	v1.00a	alopex	Create Project.
 * @date		2018-07-05	v1.01a	alopex	Add Get&Set Function.
+* @date		2018-07-05	v1.02a	alopex	Add Translate Function.
 */
 #pragma once
 
@@ -97,6 +98,19 @@ public:
 	virtual VOID CERASUSUNIT_CALLMODE CCerasusUnitSetUnitTextureRect(RECT);									//CCerasusUnit Set Unit Texture Rect(~CCerasusUnit 图元纹理形状)
 	virtual VOID CERASUSUNIT_CALLMODE CCerasusUnitSetUnitAlpha(float);										//CCerasusUnit Set Unit Alpha(~CCerasusUnit 图元Alpha)
 	virtual VOID CERASUSUNIT_CALLMODE CCerasusUnitSetTransform(DG3D_CoordsTransformPara);					//CCerasusUnit Set Transform(~CCerasusUnit 坐标变换矩阵)
+
+	//变换
+	virtual float& CERASUSUNIT_CALLMODE CCerasusUnitGetScaleX();											//CCerasusUnit Get WorldTransform Scale(~CCerasusUnit 比例变换X)
+	virtual float& CERASUSUNIT_CALLMODE CCerasusUnitGetScaleY();											//CCerasusUnit Get WorldTransform Scale(~CCerasusUnit 比例变换Y)
+	virtual float& CERASUSUNIT_CALLMODE CCerasusUnitGetScaleZ();											//CCerasusUnit Get WorldTransform Scale(~CCerasusUnit 比例变换Z)
+	virtual float& CERASUSUNIT_CALLMODE CCerasusUnitGetRotateX();											//CCerasusUnit Get WorldTransform Rotate(~CCerasusUnit 旋转变换X)
+	virtual float& CERASUSUNIT_CALLMODE CCerasusUnitGetRotateY();											//CCerasusUnit Get WorldTransform Rotate(~CCerasusUnit 旋转变换Y)
+	virtual float& CERASUSUNIT_CALLMODE CCerasusUnitGetRotateZ();											//CCerasusUnit Get WorldTransform Rotate(~CCerasusUnit 旋转变换Z)
+	virtual float& CERASUSUNIT_CALLMODE CCerasusUnitGetTranslateX();										//CCerasusUnit Get WorldTransform Translate(~CCerasusUnit 位移变换X)
+	virtual float& CERASUSUNIT_CALLMODE CCerasusUnitGetTranslateY();										//CCerasusUnit Get WorldTransform Translate(~CCerasusUnit 位移变换Y)
+	virtual float& CERASUSUNIT_CALLMODE CCerasusUnitGetTranslateZ();										//CCerasusUnit Get WorldTransform Translate(~CCerasusUnit 位移变换Z)
+
+	virtual float& CERASUSUNIT_CALLMODE CCerasusUnitGetAlpha();												//CCerasusUnit Get Unit Alpha(~CCerasusUnit Alpha)
 
 	//重置
 	virtual HRESULT CERASUSUNIT_CALLMODE CCerasusUnitReset();												//CCerasusUnit Reset(~CCerasusUnit 重置)
