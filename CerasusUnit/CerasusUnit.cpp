@@ -496,6 +496,8 @@ HRESULT CERASUSUNIT_CALLMODE CCerasusUnit::CCerasusUnitReset()
 //------------------------------------------------------------------
 HRESULT CERASUSUNIT_CALLMODE CCerasusUnit::CCerasusUnitReCreate()
 {
+	DirectThreadSafe ThreadSafe(&m_cs, m_bThreadSafe);
+
 	if (m_pTextureStr)
 	{
 		return m_pDirectGraphics3D->DirectGraphics3DInitVertex3DTexture(1, m_pTextureStr, m_nTextureWidth, m_nTextureHeight);
